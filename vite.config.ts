@@ -9,6 +9,12 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  // Configure base path for GitHub Pages
+  base: mode === 'production' ? '/earth-spiral/' : '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
   plugins: [
     react(),
     mode === 'development' &&
