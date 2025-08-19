@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Leaf, Clock, Mountain, Heart } from 'lucide-react';
 import landscapeImage from '@/assets/colorado-landscape.jpg';
@@ -169,6 +170,8 @@ const About = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
