@@ -67,7 +67,6 @@ All colors MUST be HSL and reflect seasonal transitions
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 
     /* Beautiful Gradients */
     --gradient-seasonal: linear-gradient(135deg, hsl(var(--spring-green)), hsl(var(--summer-gold)), hsl(var(--autumn-orange)), hsl(var(--winter-blue)));
