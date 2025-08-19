@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Input } from './ui/input';
@@ -77,28 +78,28 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Explore</h4>
               <div className="space-y-2">
-                <a href="/shop" className="block text-muted-foreground hover:text-primary transition-smooth">
+                <Link to="/shop" className="block text-muted-foreground hover:text-primary transition-smooth">
                   <ShoppingBag className="w-4 h-4 inline mr-2" />
                   Shop
-                </a>
-                <a href="/community" className="block text-muted-foreground hover:text-primary transition-smooth">
+                </Link>
+                <Link to="/community" className="block text-muted-foreground hover:text-primary transition-smooth">
                   <Users className="w-4 h-4 inline mr-2" />
                   Community Directory
-                </a>
-                <a href="/map" className="block text-muted-foreground hover:text-primary transition-smooth">
+                </Link>
+                <Link to="/map" className="block text-muted-foreground hover:text-primary transition-smooth">
                   <MapPin className="w-4 h-4 inline mr-2" />
                   Boulder Eco Map
-                </a>
-                <a href="/newsletter" className="block text-muted-foreground hover:text-primary transition-smooth">
+                </Link>
+                <Link to="/newsletter" className="block text-muted-foreground hover:text-primary transition-smooth">
                   <Calendar className="w-4 h-4 inline mr-2" />
                   Newsletter
-                </a>
-                <a href="/about" className="block text-muted-foreground hover:text-primary transition-smooth">
+                </Link>
+                <Link to="/about" className="block text-muted-foreground hover:text-primary transition-smooth">
                   About
-                </a>
-                <a href="/contact" className="block text-muted-foreground hover:text-primary transition-smooth">
+                </Link>
+                <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-smooth">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -121,9 +122,11 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <Button variant="earth" size="sm">
-                    Get in Touch
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="earth" size="sm">
+                      Get in Touch
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -147,12 +150,12 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-6 text-sm">
-              <a href="/privacy" className="text-muted-foreground hover:text-primary transition-smooth">
+              <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-smooth">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-smooth">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

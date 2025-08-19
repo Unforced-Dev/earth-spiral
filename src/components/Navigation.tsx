@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Leaf, ShoppingBag, Users, Map, BookOpen, Mail } from 'lucide-react';
 
@@ -17,33 +18,35 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-smooth">
+            <Link to="/" className="text-foreground hover:text-primary transition-smooth">
               Home
-            </a>
-            <a href="/shop" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
+            </Link>
+            <Link to="/shop" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
               <ShoppingBag className="w-4 h-4" />
               Shop
-            </a>
-            <a href="/community" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
+            </Link>
+            <Link to="/community" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
               <Users className="w-4 h-4" />
               Community
-            </a>
-            <a href="/map" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
+            </Link>
+            <Link to="/map" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
               <Map className="w-4 h-4" />
               Eco Map
-            </a>
-            <a href="/about" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
+            </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
               <BookOpen className="w-4 h-4" />
               About
-            </a>
+            </Link>
           </div>
 
           {/* Newsletter CTA */}
           <div className="hidden md:block">
-            <Button variant="newsletter" size="sm">
-              <Mail className="w-4 h-4" />
-              Newsletter
-            </Button>
+            <Link to="/newsletter">
+              <Button variant="newsletter" size="sm">
+                <Mail className="w-4 h-4" />
+                Newsletter
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
