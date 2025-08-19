@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				seasonal: {
+					spring: 'hsl(var(--spring-green))',
+					summer: 'hsl(var(--summer-gold))',
+					autumn: 'hsl(var(--autumn-orange))',
+					winter: 'hsl(var(--winter-blue))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
