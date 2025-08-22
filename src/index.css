@@ -1,9 +1,10 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Earth Spiral Design System - Colorado Front Range Inspired 
-All colors MUST be HSL and reflect seasonal transitions
+All colors MUST be HSL and reflect warm earth tones from the Wheel of the Year
 */
 
 @layer base {
@@ -31,15 +32,15 @@ All colors MUST be HSL and reflect seasonal transitions
     --muted: 35 20% 92%;
     --muted-foreground: 25 15% 45%;
 
-    /* Accent - Mountain Sky Blue */
-    --accent: 200 50% 75%;
+    /* Accent - Warm Copper */
+    --accent: 25 50% 65%;
     --accent-foreground: 25 25% 15%;
 
-    /* Seasonal Colors */
-    --spring-green: 100 45% 55%;
-    --summer-gold: 45 85% 65%;
-    --autumn-orange: 25 75% 60%;
-    --winter-blue: 210 60% 70%;
+    /* Warm Earth Seasonal Colors - inspired by the wheel */
+    --spring-green: 100 35% 45%;
+    --summer-gold: 45 65% 55%;
+    --autumn-orange: 25 65% 55%;
+    --winter-sage: 140 25% 55%;
 
     /* Destructive */
     --destructive: 0 75% 55%;
@@ -53,23 +54,16 @@ All colors MUST be HSL and reflect seasonal transitions
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Beautiful Gradients */
-    --gradient-seasonal: linear-gradient(135deg, hsl(var(--spring-green)), hsl(var(--summer-gold)), hsl(var(--autumn-orange)), hsl(var(--winter-blue)));
+    /* Warm Earth Gradients */
+    --gradient-seasonal: linear-gradient(135deg, hsl(var(--spring-green)), hsl(var(--summer-gold)), hsl(var(--autumn-orange)), hsl(var(--winter-sage)));
     --gradient-earth: linear-gradient(135deg, hsl(var(--primary)), hsl(35 40% 45%));
     --gradient-mountain: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--primary)));
     --gradient-subtle: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
@@ -104,7 +98,7 @@ All colors MUST be HSL and reflect seasonal transitions
     --muted: 25 15% 15%;
     --muted-foreground: 45 10% 65%;
 
-    --accent: 200 40% 50%;
+    --accent: 25 40% 50%;
     --accent-foreground: 45 15% 95%;
 
     --destructive: 0 65% 50%;
@@ -130,7 +124,8 @@ All colors MUST be HSL and reflect seasonal transitions
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Georgia', 'Times New Roman', serif;
   }
 
   /* Custom utility classes */
@@ -180,11 +175,9 @@ All colors MUST be HSL and reflect seasonal transitions
     animation: spiral-rotate 2s ease-in-out infinite;
   }
 
-  /* Seasonal text effects */
+  /* Warm earth text effects - replacing rainbow */
   .text-seasonal {
-    background: var(--gradient-seasonal);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: hsl(var(--accent));
+    font-weight: 600;
   }
 }

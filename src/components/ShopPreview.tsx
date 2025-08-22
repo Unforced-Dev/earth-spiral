@@ -1,39 +1,41 @@
+
 import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { ShoppingCart, Star } from 'lucide-react';
 import cardsImage from '@/assets/seasonal-cards-mockup.jpg';
-import wheelImage from '@/assets/wheel-of-year-hero.jpg';
+import wheelImage from '@/assets/wheel-of-year-poster.jpg';
+import mapImage from '@/assets/wheel-of-year-map.jpg';
 
 const ShopPreview = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: "Wheel of the Year - Art Print",
+      name: "Rocky Mountain Wheel of the Year",
       price: "$45",
       image: wheelImage,
-      description: "Beautiful poster featuring 30 Colorado native species arranged by season",
+      description: "Beautiful poster featuring seasonal patterns of the Front Range bioregion",
       badge: "Bestseller",
-      badgeColor: "seasonal-summer"
+      badgeColor: "bg-accent"
     },
     {
       id: 2,
+      name: "Wheel of the Year Map & Guide",
+      price: "$35",
+      image: mapImage,
+      description: "Detailed seasonal guide with nature-based activities and ecological insights",
+      badge: "New",
+      badgeColor: "bg-spring-green"
+    },
+    {
+      id: 3,
       name: "Seasonal Greeting Cards",
       price: "$24",
       image: cardsImage,
       description: "Set of 8 cards featuring watercolor Colorado flora through the seasons",
-      badge: "New",
-      badgeColor: "seasonal-spring"
-    },
-    {
-      id: 3,
-      name: "Family Activity Guides",
-      price: "$32",
-      image: wheelImage,
-      description: "Four seasonal guides with nature-based activities for families",
       badge: "Popular",
-      badgeColor: "seasonal-autumn"
+      badgeColor: "bg-autumn-orange"
     }
   ];
 
@@ -63,9 +65,7 @@ const ShopPreview = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
                   />
                 </div>
-                <Badge 
-                  className={`absolute top-3 left-3 bg-${product.badgeColor} text-white border-0`}
-                >
+                <Badge className={`absolute top-3 left-3 ${product.badgeColor} text-white border-0`}>
                   {product.badge}
                 </Badge>
               </CardHeader>
@@ -80,7 +80,7 @@ const ShopPreview = () => {
                 <div className="flex items-center mt-3 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-seasonal-summer text-seasonal-summer" />
+                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                     ))}
                   </div>
                   <span className="ml-2">(24 reviews)</span>

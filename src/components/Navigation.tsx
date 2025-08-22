@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Leaf, ShoppingBag, Users, Map, BookOpen, Mail } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 
 const Navigation = () => {
   return (
@@ -16,37 +17,32 @@ const Navigation = () => {
             <span className="text-xl font-bold text-seasonal">Earth Spiral</span>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Simplified without icons */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-smooth">
+            <Link to="/" className="text-foreground hover:text-accent transition-smooth font-medium">
               Home
             </Link>
-            <Link to="/shop" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
-              <ShoppingBag className="w-4 h-4" />
+            <Link to="/shop" className="text-foreground hover:text-accent transition-smooth font-medium">
               Shop
             </Link>
-            <Link to="/community" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
-              <Users className="w-4 h-4" />
+            <Link to="/community" className="text-foreground hover:text-accent transition-smooth font-medium">
               Community
             </Link>
-            <Link to="/map" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
-              <Map className="w-4 h-4" />
+            <Link to="/map" className="text-foreground hover:text-accent transition-smooth font-medium">
               Eco Map
             </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-smooth flex items-center gap-1">
-              <BookOpen className="w-4 h-4" />
+            <Link to="/about" className="text-foreground hover:text-accent transition-smooth font-medium">
               About
             </Link>
           </div>
 
-          {/* Newsletter CTA */}
+          {/* Sign Up CTA */}
           <div className="hidden md:block">
-            <Link to="/newsletter">
-              <Button variant="newsletter" size="sm">
-                <Mail className="w-4 h-4" />
-                Newsletter
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPAz-Rn42IzLpTsa8b-y1b-d3OTJUZ2tx6dq6j4M2kKbw_KQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+              <Button variant="earth" size="sm">
+                Sign Up
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

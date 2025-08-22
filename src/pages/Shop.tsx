@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -6,30 +7,31 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, Star, Filter, Grid, List } from 'lucide-react';
 import cardsImage from '@/assets/seasonal-cards-mockup.jpg';
-import wheelImage from '@/assets/wheel-of-year-hero.jpg';
+import wheelImage from '@/assets/wheel-of-year-poster.jpg';
+import mapImage from '@/assets/wheel-of-year-map.jpg';
 
 const Shop = () => {
   const products = [
     {
       id: 1,
-      name: "Wheel of the Year - Poster",
+      name: "Rocky Mountain Wheel of the Year - Poster",
       price: "$45",
       originalPrice: "$55",
       image: wheelImage,
-      description: "Large format poster featuring 30 Colorado native species arranged by season. Perfect for home or office.",
+      description: "Large format poster featuring seasonal patterns of the Front Range bioregion. Perfect for home or office.",
       badge: "Bestseller",
-      badgeColor: "seasonal-summer",
+      badgeColor: "bg-accent",
       category: "Artwork"
     },
     {
       id: 2,
-      name: "Wheel of the Year - Square Print",
+      name: "Wheel of the Year Map & Activity Guide",
       price: "$35",
-      image: wheelImage,
-      description: "Square art print version, ideal for framing. High-quality printing on archival paper.",
+      image: mapImage,
+      description: "Comprehensive guide with seasonal activities, foraging tips, and ecological insights for each season.",
       badge: "New",
-      badgeColor: "seasonal-spring",
-      category: "Artwork"
+      badgeColor: "bg-spring-green",
+      category: "Guides"
     },
     {
       id: 3,
@@ -38,14 +40,14 @@ const Shop = () => {
       image: cardsImage,
       description: "Set of 8 cards featuring watercolor Colorado flora through the seasons. Blank inside.",
       badge: "Popular",
-      badgeColor: "seasonal-autumn",
+      badgeColor: "bg-autumn-orange",
       category: "Cards"
     },
     {
       id: 4,
       name: "Boulder Regenerative Ecology Map",
       price: "$28",
-      image: wheelImage,
+      image: mapImage,
       description: "Detailed map of regenerative projects and initiatives across Boulder County.",
       category: "Maps"
     },
@@ -53,7 +55,7 @@ const Shop = () => {
       id: 5,
       name: "Spring Family Activity Guide",
       price: "$18",
-      image: wheelImage,
+      image: mapImage,
       description: "Nature-based activities for families to connect with spring's awakening.",
       category: "Guides"
     },
@@ -61,7 +63,7 @@ const Shop = () => {
       id: 6,
       name: "Summer Family Activity Guide",
       price: "$18",
-      image: wheelImage,
+      image: mapImage,
       description: "Explore summer's abundance with guided family activities and nature crafts.",
       category: "Guides"
     }
@@ -131,9 +133,7 @@ const Shop = () => {
                     />
                   </div>
                   {product.badge && (
-                    <Badge 
-                      className={`absolute top-3 left-3 bg-${product.badgeColor} text-white border-0`}
-                    >
+                    <Badge className={`absolute top-3 left-3 ${product.badgeColor} text-white border-0`}>
                       {product.badge}
                     </Badge>
                   )}
@@ -159,7 +159,7 @@ const Shop = () => {
                   <div className="flex items-center text-sm text-muted-foreground">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-seasonal-summer text-seasonal-summer" />
+                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                       ))}
                     </div>
                     <span className="ml-2">(24 reviews)</span>
@@ -185,13 +185,17 @@ const Shop = () => {
             Stay Connected with the Seasons
           </h2>
           <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Get monthly updates on new products, seasonal activities, and special offers for our community.
+            Get updates on new products, seasonal activities, and special offers for our community.
           </p>
-          <Button variant="secondary" size="lg">
-            Join Our Newsletter
-          </Button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPAz-Rn42IzLpTsa8b-y1b-d3OTJUZ2tx6dq6j4M2kKbw_KQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" size="lg">
+              Sign Up
+            </Button>
+          </a>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

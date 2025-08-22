@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
@@ -5,7 +6,6 @@ import { Separator } from './ui/separator';
 import { Input } from './ui/input';
 import { 
   Leaf, 
-  Mail, 
   MapPin, 
   Calendar, 
   Users, 
@@ -28,17 +28,14 @@ const Footer = () => {
               Stay Connected with the Seasons
             </h3>
             <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-              Receive monthly updates on seasonal activities, local events, and ways to deepen your connection with the Front Range bioregion.
+              Receive updates on seasonal activities, local events, and ways to deepen your connection with the Front Range bioregion.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Input 
-                type="email" 
-                placeholder="Enter your email"
-                className="bg-background/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/70"
-              />
-              <Button variant="secondary">
-                Subscribe
-              </Button>
+            <div className="flex justify-center">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPAz-Rn42IzLpTsa8b-y1b-d3OTJUZ2tx6dq6j4M2kKbw_KQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                <Button variant="secondary" size="lg">
+                  Sign Up
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -68,9 +65,6 @@ const Footer = () => {
                 <Button variant="ghost" size="sm" className="w-10 h-10 p-0">
                   <Facebook className="w-4 h-4" />
                 </Button>
-                <Button variant="ghost" size="sm" className="w-10 h-10 p-0">
-                  <Mail className="w-4 h-4" />
-                </Button>
               </div>
             </div>
 
@@ -90,10 +84,10 @@ const Footer = () => {
                   <MapPin className="w-4 h-4 inline mr-2" />
                   Boulder Eco Map
                 </Link>
-                <Link to="/newsletter" className="block text-muted-foreground hover:text-primary transition-smooth">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPAz-Rn42IzLpTsa8b-y1b-d3OTJUZ2tx6dq6j4M2kKbw_KQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-smooth">
                   <Calendar className="w-4 h-4 inline mr-2" />
-                  Newsletter
-                </Link>
+                  Sign Up
+                </a>
                 <Link to="/about" className="block text-muted-foreground hover:text-primary transition-smooth">
                   About
                 </Link>
@@ -108,7 +102,6 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-start space-x-2">
-                  <Mail className="w-4 h-4 mt-1" />
                   <div>
                     <p className="text-sm">hello@earthspiral.co</p>
                     <p className="text-xs">Response within 1-2 days</p>
@@ -146,7 +139,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center text-sm text-muted-foreground">
-              Made with <Heart className="w-4 h-4 mx-1 text-seasonal-autumn" /> for the Front Range bioregion
+              Made with <Heart className="w-4 h-4 mx-1 text-accent" /> for the Front Range bioregion
             </div>
             
             <div className="flex space-x-6 text-sm">
